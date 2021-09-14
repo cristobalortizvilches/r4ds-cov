@@ -280,3 +280,15 @@ destinos_populares <- vuelos %>%
   group_by(destino) %>% 
   filter(n() > 365)
 destinos_populares
+
+
+# R Project ---------------------------------------------------------------
+
+library(tidyverse)
+library(datos)
+
+ggplot(diamantes, aes(quilate, precio)) + 
+  geom_hex()
+ggsave("diamantes.pdf")
+
+write_csv(diamantes, "diamantes.csv")
